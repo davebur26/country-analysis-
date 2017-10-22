@@ -2,20 +2,71 @@
 <html>
   <head>
     <title>Country Analysis</title>
-    <script src='app.js'></script>
     <link rel='stylesheet' type='text/css' href='main.css'>
-    <script type="text/javascript" src="app.js" ></script>
-    <!-- <script type="text/javascript" src="pieChart.js"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src = "mapWrapper.js"></script>
+    <script src="app.js" ></script>
+    <script type="text/javascript" src="pieChart.js"></script>
+    <script type="text/javascript" src="columnChart.js"></script>
+    <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
 
-    <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
-    <!-- <script src = "mapWrapper.js"></script> -->
 
 
   </head>
   <body>
 
-    <h1>Countries</h1>
-    <select id="drop-down"></select>
+    <h1>Countries Top Trumps</h1>
+    <!-- <select id="drop-down"></select> -->
+
+    <form id="answers">
+<table>
+  <tr>
+    <td></td>
+    <td>
+      <div id="countryA"></div>
+      <img id="countryAImg" src="">
+    </td>
+    <td>
+      <div id="countryB"></div>
+      <img id="countryBImg" src="">
+
+    </td>
+    <td></td>
+
+  </tr>
+  <tr>
+    <td id="question">Largest Population?</td>
+    <td id ="popA"><input type="radio" name ="population" value = "countryA"></td>
+    <td id ="popB"><input type="radio" name ="population" value = "countryB"></td>
+    <td><label id="popResult"></label></td>
+  </tr>
+  <tr>
+    <td id="question">Largest Area?</td>
+    <td id ="areaA"><input type="radio" name ="area" value = "countryA"></td>
+    <td id ="areaB"><input type="radio" name ="area" value = "countryB"></td>
+    <td><label id="areaResult"></label></td>
+  </tr>
+  <tr>
+    <td id="question">Most Borders?</td>
+    <td id ="bordersA"><input type="radio" name ="borders" value = "countryA"></td>
+    <td id ="bordersB"><input type="radio" name ="borders" value = "countryB"></td>
+    <td><label id="borderResult"></td>
+  </tr>
+  <tr>
+    <td id="question">Closest to Equator?</td>
+    <td id ="equatorA"><input type="radio" name ="equator" value = "countryA"></td>
+    <td id ="equatorB"><input type="radio" name ="equator" value = "countryB"></td>
+    <td><label id="equatorResult"></td>
+  </tr>
+</table>
+
+<button type="button" value="Submit">Submit</button>
+
+    </form>
+    <div id='main-map'></div>
+    <div id="pie-chart"></div>
+    <div id="column-chart"></div>
+
 
   </body>
 </html>

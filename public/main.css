@@ -1,1 +1,30 @@
 
+#main-map {
+  height: 300px;
+  width: 100%;
+  padding: 50px;
+}
+
+#countryAImg {
+  height: 150px;
+  width: 250px;
+
+}
+#countryBImg {
+  height: 150px;
+  width: 250px;
+
+}
+
+
+
+table:not(#question){
+  text-align: center;
+  }
+
+#question{
+  text-align: left;
+  }
+table{
+  width: 100%;
+}
